@@ -1,42 +1,42 @@
-const products = [
+export const products = [
     {
         id: 1,
         name: 'Wheat Chex',
-        image: 'img',
+        image: '../assets/wheatchex.jpeg',
         description: 'Baked, square shaped cereal',
         category: 'wheat',
         price: 4.00
-    }
+    },
     {
-        id: 2
+        id: 2,
         name: 'Life',
-        image: 'img',
+        image: '../assets/life.jpeg',
         description: 'Tasty squares of whole grain',
         category: 'whole grain',
-        price: 4.00
-    }
+        price: 3.50
+    },
     {
-        id: 3
+        id: 3,
         name: 'Kix',
-        image: 'img',
+        image: '../assets/kix.jpeg',
         description: 'Expanded puffed-grain cereal',
         category: 'cornmeal',
-        price: 4.00
-    }
+        price: 4.50
+    },
     {
-        id: 4
+        id: 4,
         name: 'Rice Krispies',
-        image: 'img',
+        image: '../assets/ricekrispies.jpeg',
         description: 'Crunchy and crisp bits',
         category: 'rice',
-        price: 4.00
-    }
+        price: 3.00
+    },
     {
-        id: 5
+        id: 5,
         name: 'Cheerios',
-        image: 'img',
+        image: '../assets/cheerios',
         description: 'Shaped like a torus',
         category: 'oats',
-        price: 4.00
+        price: 3.25
     }
 ];
