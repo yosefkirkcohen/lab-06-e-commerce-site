@@ -34,7 +34,7 @@ export const products = [
     {
         id: 5,
         name: 'Cheerios',
-        image: '../assets/cheerios',
+        image: '../assets/cheerios.jpeg',
         description: 'Shaped like a torus',
         category: 'oats',
         price: 3.25

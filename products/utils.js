@@ -1,4 +1,4 @@
-function renderItem(cereal) {
+export function renderItem(cereal) {
     const li = document.createElement('li');
     const cerealName = document.createElement('h3');
     const image = document.createElement('img');
@@ -9,7 +9,7 @@ function renderItem(cereal) {
     cerealName.textContent = cereal.name;
     image.src = cereal.image;
     description.textContent = cereal.description;
-    price.textContent = cereal.price;
+    price.textContent = `$${cereal.price}`;
 
     return li;
 }
