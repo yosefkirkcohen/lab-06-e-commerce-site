@@ -1,6 +1,7 @@
 import { products } from '../products/cereals.js';
 import { cart } from './cart-data.js';
 import { renderTableRow } from './render-table-row.js';
+import { calcOrderTotal } from '../utils.js';
 
 const cartTBody = document.getElementById('cart-t-body');
 
@@ -10,3 +11,9 @@ for (let item of cart) {
 
     cartTBody.append(tr);
 }
+
+const orderTotal = calcOrderTotal(cart, products);
+
+const orderTotalTd = document.getElementById('order-total');
+
+orderTotalTd.textContent = orderTotal;
