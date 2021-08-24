@@ -1,4 +1,4 @@
-import { renderItem } from './utils.js';
+import { renderItem } from './render.utils.js';
 import { products } from './cereals.js';
 const ulEl = document.getElementById('ul');
 // initialize global state
