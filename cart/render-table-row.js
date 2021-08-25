@@ -13,7 +13,7 @@ export function renderTableRow(cartItem) {
 
     const product = findById(products, cartItem.id);
     nameTd.textContent = product.name;
-    priceTd.textContent = product.price;
+    priceTd.textContent = product.price.toFixed(2);
     quantityTd.textContent = cartItem.quantity;
     totalTd.textContent = calcItemTotal(product.price, cartItem.quantity);
 
