@@ -23,4 +23,8 @@ const orderButton = document.getElementById('order-button');
 if (cart.length === 0) {
     orderButton.disabled = true;
 }
-console.log(cart);
+
+orderButton.addEventListener('click', () => {
+    alert(JSON.stringify(cart, true, 2));
+    localStorage.removeItem('CART');
+});
