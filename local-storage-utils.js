@@ -1,8 +1,12 @@
 import { findById } from './utils.js';
 
 export function getCart() {
+    
     const stringyCart = localStorage.getItem('CART');
-    const cart = JSON.parse(stringyCart);
+    let cart = JSON.parse(stringyCart);
+    if (!cart) {
+        cart = [];
+    }
     return cart;
 } 
 
@@ -13,9 +17,7 @@ export function setCart(cart) {
 
 export function addToCart(theId) {
     let cart = getCart();
-    if (!cart) {
-        cart = [];
-    }
+   
     const product = findById(cart, theId);
     if (product) {
         product.quantity++;
