@@ -27,4 +27,5 @@ if (cart.length === 0) {
 orderButton.addEventListener('click', () => {
     alert(JSON.stringify(cart, true, 2));
     localStorage.removeItem('CART');
+    window.location.replace('../index.html');
 });
