@@ -1,8 +1,8 @@
 
-import { products } from '../products/cereals.js';
+import { getProducts } from '../local-storage-utils.js';
 import { findById } from '../utils.js';
 import { calcItemTotal } from '../utils.js';
-import { cart } from '../cart/cart-data.js';
+import { getCart } from '../local-storage-utils.js';
 import { calcOrderTotal } from '../utils.js';
 
 
@@ -22,7 +22,7 @@ test('should take an id and find corresponding item from an array', (expect) => 
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = findById(products, 1);
+    const actual = findById(getProducts(), 1);
 
     //Expect
     // Make assertions about what is expected versus the actual result
@@ -43,14 +43,14 @@ test('should take in price and quantity', (expect) => {
     expect.equal(actual, expected);
 });
 
-test('should take in cart and product arrays and give a cart total', (expect) => {
+test ('should take in cart and product arrays and give a cart total', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 20.25;
+    const expected = 0;
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = calcOrderTotal(cart, products);
+    const actual = calcOrderTotal(getCart(), getProducts());
 
     //Expect
     // Make assertions about what is expected versus the actual result

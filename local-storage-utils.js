@@ -40,10 +40,10 @@ export function getProducts() {
     const stringyProducts = localStorage.getItem('PRODUCTS');
     if (!stringyProducts) {
         const storageProducts = products;
-        console.log(1);
+        
         return storageProducts;
     } else {
-        console.log(2);
+        
         const storageProducts = JSON.parse(stringyProducts);
         return storageProducts;
     }
