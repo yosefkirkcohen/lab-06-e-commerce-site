@@ -1,5 +1,5 @@
 import { findById } from '../utils.js';
-import { products } from '../products/cereals.js';
+import { getProducts } from '../local-storage-utils.js';
 import { calcItemTotal } from '../utils.js';
 
 export function renderTableRow(cartItem) {
@@ -11,7 +11,7 @@ export function renderTableRow(cartItem) {
 
     tr.append(nameTd, priceTd, quantityTd, totalTd);
 
-    const product = findById(products, cartItem.id);
+    const product = findById(getProducts(), cartItem.id);
     nameTd.textContent = product.name;
     priceTd.textContent = product.price.toFixed(2);
     quantityTd.textContent = cartItem.quantity;
