@@ -15,7 +15,7 @@ form.addEventListener('submit', (event) => {
         image: data.get('image'),
         description: data.get('description'),
         category: data.get('category'),
-        price: data.get('price')
+        price: Number(data.get('price'))
     };
     addToProducts(product);
 
