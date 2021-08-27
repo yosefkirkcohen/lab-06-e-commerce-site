@@ -1,4 +1,5 @@
 import { findById } from './utils.js';
+import { products } from './products/cereals.js';
 
 export function getCart() {
     
@@ -16,7 +17,7 @@ export function setCart(cart) {
 }
 
 export function addToCart(theId) {
-    let cart = getCart();
+    const cart = getCart();
    
     const product = findById(cart, theId);
     if (product) {
@@ -33,4 +34,28 @@ export function addToCart(theId) {
 
 export function clearCart() {
 
+}
+
+export function getProducts() {
+    const stringyProducts = localStorage.getItem('PRODUCTS');
+    if (!stringyProducts) {
+        const storageProducts = products;
+        console.log(1);
+        return storageProducts;
+    } else {
+        console.log(2);
+        const storageProducts = JSON.parse(stringyProducts);
+        return storageProducts;
+    }
+}
+
+export function setProducts(products) {
+    const stringyProduct = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', stringyProduct);
+}
+
+export function addToProducts(product) {
+    const storageProducts = getProducts();
+    storageProducts.push(product);
+    setProducts(storageProducts);
 }
