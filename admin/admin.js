@@ -10,7 +10,7 @@ form.addEventListener('submit', (event) => {
     
 
     const product = {
-        id: data.get('id'),
+        id: Number(data.get('id')),
         name: data.get('cereal'),
         image: data.get('image'),
         description: data.get('description'),
